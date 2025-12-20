@@ -5,7 +5,7 @@ export async function GET(context) {
 	const blog = await getCollection('blog')
 	return rss({
 		// `<title>` field in output xml
-		title: 'Saral Theme',
+		title: 'Bulk CTC',
 		// `<description>` field in output xml
 		description:
 			'A simple theme for personal blog sites, created for Astro framework',
