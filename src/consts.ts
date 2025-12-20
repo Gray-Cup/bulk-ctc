@@ -8,35 +8,35 @@ export const SITE_DESCRIPTION =
 // If you deploy to a subdirectory, set the `WEBSITE_BASE` here.
 // e.g. '/blog' if you are deploying to example.com/blog
 // Leave it as an empty string if you are deploying to a root domain (e.g. example.com)
-export const SITE_BASE = '/saral-theme-astro'
+export const SITE_BASE = ''
 
 export const SocialLinks = [
 	{
-		name: 'GitHub',
-		url: 'https://github.com/yashjawale',
+		name: 'Company Website',
+		url: 'https://graycup.org',
 	},
 	{
-		name: 'LinkedIn',
-		url: 'https://www.linkedin.com/in/yashjawale/',
+		name: 'B2B Store',
+		url: 'https://b2b.graycup.in',
 	},
 	{
-		name: 'X / Twitter',
-		url: 'https://twitter.com/imyashjawale',
-	},
-	{
-		name: 'Instagram',
-		url: 'https://instagram.com/imyashjawale',
+		name: 'B2C Store',
+		url: 'https://graycup.in',
 	},
 ]
 
 export const WebsiteLinks = [
 	{
-		name: 'Home',
-		url: '',
-	},
-	{
 		name: 'Blog',
 		url: 'blog',
+	},
+	{
+		name: 'Products',
+		url: 'products',
+	},
+	{
+		name: 'Bulk Store',
+		url: 'bulk-store',
 	},
 	{
 		name: 'About',

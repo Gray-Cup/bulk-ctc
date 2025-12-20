@@ -1,12 +1,12 @@
 # Saral Theme
 
 [![Built with Astro](https://astro.badg.es/v2/built-with-astro/tiny.svg)](https://astro.build)
-[![Lint, Format, and Type Check](https://github.com/yashjawale/saral-theme-astro/actions/workflows/lint.yml/badge.svg)](https://github.com/yashjawale/saral-theme-astro/actions/workflows/lint.yml)
-[![Deploy to GitHub Pages](https://github.com/yashjawale/saral-theme-astro/actions/workflows/deploy.yml/badge.svg)](https://github.com/yashjawale/saral-theme-astro/actions/workflows/deploy.yml)
+[![Lint, Format, and Type Check](https://github.com/yashjawale//actions/workflows/lint.yml/badge.svg)](https://github.com/yashjawale//actions/workflows/lint.yml)
+[![Deploy to GitHub Pages](https://github.com/yashjawale//actions/workflows/deploy.yml/badge.svg)](https://github.com/yashjawale//actions/workflows/deploy.yml)
 
 A simple & minimal theme for personal blog sites, crafted for Astro framework.
 
-View demo at [https://yashjawale.github.io/saral-theme-astro/](https://yashjawale.github.io/saral-theme-astro/)
+View demo at [https://yashjawale.github.io//](https://yashjawale.github.io//)
 
 View in Astro themes at [https://astro.build/themes/details/saral/](https://astro.build/themes/details/saral/)
 
@@ -47,7 +47,7 @@ Derived from [yashjawale.github.io](https://yashjawale.github.io)
 - Create a PR & merge after passing workflow checks
 
 > [!TIP]
-> Facing any issues or want a feature? Feel free to create a new [issue](https://github.com/yashjawale/saral-theme-astro/issues)
+> Facing any issues or want a feature? Feel free to create a new [issue](https://github.com/yashjawale//issues)
 
 ---
 
