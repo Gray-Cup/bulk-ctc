@@ -1,0 +1,67 @@
+---
+import Layout from "@/layouts/Base.astro";
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import PageHeadline from "@/components/PageHeadline.astro";
+
+const posts = (await getCollection("blog"))
+  .filter((post) => post.id.startsWith("en/"))
+  .sort((a, b) => a.data.date.valueOf() - b.data.date.valueOf());
+
+const title = "Blog";
+---
+
+<Layout {title}>
+  <PageHeadline {title} />
+
+  <p>
+    A sample for managing blog or news content. It uses Astro's content collection.
+  </p>
+
+  <p>
+    <a
+      href={`https://docs.astro.build/en/guides/content-collections/`}
+      target="_blank"
+    >
+      Content Collection | Astro Docs
+      <span class="material-icons-sharp dir"> open_in_new </span>
+    </a>
+  </p>
+
+  <ul>
+    {
+      posts.map((post) => {
+        const [, ...id] = post.id.split("/");
+        return (
+          <li>
+            <a href={`/blog/${id.join("/")}/`}>
+              {post.data.cover && (
+                <Image src={post.data.cover} alt={post.data.title} />
+              )}
+              <h2>{post.data.title}</h2>
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</Layout>
+
+<style>
+  p {
+    margin-block-start: var(--sp-s);
+  }
+  ul {
+    margin-block-start: var(--sp-m);
+    display: grid;
+    gap: var(--sp-s);
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  }
+
+  li {
+    margin-block-end: 1rem;
+    img {
+      border-radius: 6px;
+    }
+  }
+</style>

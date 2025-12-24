@@ -3,12 +3,12 @@
 
 import Footer from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
-import LocaleHtmlHead from "@/components/i18n/LocaleHtmlHead.astro";
-import LocaleSuggest from "@/components/i18n/LocaleSuggest.astro";
+
 
 import { SITE_TITLE, SITE_DESCRIPTION, X_ACCOUNT } from "@/consts";
-import { useTranslations, LOCALES, getLocalePaths, type Lang } from "@/i18n";
-const t = useTranslations(Astro.currentLocale as Lang);
+// import { useTranslations, LOCALES, getLocalePaths, type Lang } from "@/i18n";
+// const t = useTranslations(Astro.currentLocale as Lang);
+const locale = "en";
 import "@/styles/global.css";
 
 interface Props {
@@ -23,8 +23,8 @@ const {
 } = Astro.props.frontmatter || Astro.props;
 
 const locale = Astro.currentLocale as Lang;
-const localeTitle = title ? `${title} - ${t(SITE_TITLE)}` : t(SITE_TITLE);
-const localeDescription = description || t(SITE_DESCRIPTION);
+const localeTitle = title ? `${title} - ${SITE_TITLE}` : SITE_TITLE;
+const localeDescription = description || SITE_DESCRIPTION;
 ---
 
 <!--
@@ -33,7 +33,7 @@ const localeDescription = description || t(SITE_DESCRIPTION);
   https://github.com/psephopaiktes/astro-i18n-starter
 
 -->
-<html lang={LOCALES[locale].lang || locale} dir={LOCALES[locale].dir || null}>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>{localeTitle}</title>
@@ -42,13 +42,7 @@ const localeDescription = description || t(SITE_DESCRIPTION);
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="generator" content={Astro.generator} />
     {
-      getLocalePaths(Astro.url).map((props) => (
-        <link
-          rel="alternate"
-          hreflang={LOCALES[props.lang].lang || props.lang}
-          href={Astro.site?.origin + props.path}
-        />
-      ))
+
     }
 
     <!-- icon -->
@@ -65,9 +59,9 @@ const localeDescription = description || t(SITE_DESCRIPTION);
     <meta property="og:description" content={localeDescription} />
     <meta property="og:image" content={Astro.site + "ogp.png"} />
     <meta property="og:url" content={Astro.url} />
-    <meta property="og:locale" content={LOCALES[locale].lang || locale} />
+    <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content={t(X_ACCOUNT)} />
+    <meta name="twitter:site" content={X_ACCOUNT} />
 
     <!-- External Resource -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -79,11 +73,11 @@ const localeDescription = description || t(SITE_DESCRIPTION);
     <link rel="preload" as="style" fetchpriority="high" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp&display=swap" media="print" onload={`this.media='all'`} />
 
-    <LocaleHtmlHead />
+
   </head>
 
   <body>
-    <LocaleSuggest />
+
     <Header />
 
     <main class="l-main l-content">
