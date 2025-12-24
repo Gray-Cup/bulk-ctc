@@ -8,7 +8,7 @@ import cloudflare from '@astrojs/cloudflare';
 // https://astro.build/config
 export default defineConfig({
   // Set your site's URL
-  site: 'https://astro-i18n-starter.pages.dev',
+  site: 'https://bulkctc.com',
 
   i18n: {
     defaultLocale: DEFAULT_LOCALE_SETTING,
